@@ -234,6 +234,7 @@
   ./services/misc/parsoid.nix
   ./services/misc/phd.nix
   ./services/misc/plex.nix
+  ./services/misc/rails-example.nix
   ./services/misc/redmine.nix
   ./services/misc/rippled.nix
   ./services/misc/ripple-rest.nix

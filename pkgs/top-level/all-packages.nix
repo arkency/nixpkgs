@@ -3052,6 +3052,10 @@ let
 
   radvd = callPackage ../tools/networking/radvd { };
 
+  rails-example = callPackage ../applications/misc/rails-example {
+    ruby = ruby_2_2;
+  };
+
   ranger = callPackage ../applications/misc/ranger { };
 
   rarcrack = callPackage ../tools/security/rarcrack { };
