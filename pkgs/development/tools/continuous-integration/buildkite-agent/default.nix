@@ -1,11 +1,11 @@
 { stdenv, fetchurl, makeWrapper, coreutils, git, openssh, bash, gnused, gnugrep }:
 
 stdenv.mkDerivation rec {
-  name = "buildkite-agent-2.1.6.1";
+  name = "buildkite-agent-2.1.8";
 
   src = fetchurl {
-    url = "https://github.com/buildkite/agent/releases/download/v2.1.6.1/buildkite-agent-linux-386-2.1.6.1.tar.gz";
-    sha256 = "6ee24c25755773362e62324d96ab9fe1ea22c953865b7f8060033a97b8cb0e7a";
+    url = "https://github.com/buildkite/agent/releases/download/v2.1.8/buildkite-agent-linux-386-2.1.8.tar.gz";
+    sha256 = "f54ca7da4379180700f5038779a7cbb1cef31d49f4a06c42702d68c34387c242";
   };
 
   buildInputs = [ makeWrapper ];
