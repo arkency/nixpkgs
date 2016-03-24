@@ -80,8 +80,7 @@ in
         wantedBy = [ "multi-user.target" ];
         after = [ "network.target" ];
         environment.HOME = "/var/lib/buildkite-agent";
-        preStart =
-          ''
+        preStart = ''
             ${pkgs.coreutils}/bin/mkdir -m 0700 -p /var/lib/buildkite-agent/.ssh
 
             if ! [ -f /var/lib/buildkite-agent/.ssh/id_rsa ]; then
@@ -93,9 +92,6 @@ in
               echo "${cfg.openssh.publicKey}" > /var/lib/buildkite-agent/.ssh/id_rsa.pub
               ${pkgs.coreutils}/bin/chmod 600 /var/lib/buildkite-agent/.ssh/id_rsa.pub
             fi
-
-            ${pkgs.openssh}/bin/ssh-keyscan -H github.com > /var/lib/buildkite-agent/.ssh/known_hosts
-            ${pkgs.coreutils}/bin/chmod 600 /var/lib/buildkite-agent/.ssh/known_hosts
           '';
 
         serviceConfig =
