@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, makeWrapper, xkbcomp, xorgserver, getopt, xkeyboard_config, xauth, utillinux, which, fontsConf}:
+{ stdenv, fetchurl, makeWrapper, xkbcomp, xorgserver, getopt, xkeyboard_config, xauth, utillinux, which, fontsConf, gawk }:
 let
   xvfb_run = fetchurl {
     url = https://projects.archlinux.org/svntogit/packages.git/plain/trunk/xvfb-run?h=packages/xorg-server;
