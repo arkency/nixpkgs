@@ -80,7 +80,7 @@ in
         wantedBy = [ "multi-user.target" ];
         after = [ "network.target" ];
         environment.HOME = "/var/lib/buildkite-agent";
-        postStart = ''
+        preStart = ''
             ${pkgs.coreutils}/bin/mkdir -m 0700 -p /var/lib/buildkite-agent/.ssh
 
             if ! [ -f /var/lib/buildkite-agent/.ssh/id_rsa ]; then
